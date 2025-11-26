@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online C++ Compiler</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Toolbar -->
+        <div class="toolbar">
+            <div class="toolbar-left">
+                <img src="favicon.png" alt="Logo" class="logo">
+                <span class="filename">main.cpp</span>
+            </div>
+            <div class="toolbar-right">
+                <button id="runBtn" class="btn btn-run">
+                    <span class="btn-icon">▶</span>
+                    Run
+                </button>
+                <button id="debugBtn" class="btn btn-debug">
+                    <span class="btn-icon">🐛</span>
+                    Debug
+                </button>
+                <button id="stopBtn" class="btn btn-stop">
+                    <span class="btn-icon">■</span>
+                    Stop
+                </button>
+                <button id="shareBtn" class="btn btn-secondary">Share</button>
+                <button id="saveBtn" class="btn btn-secondary">Save</button>
+                <button id="beautifyBtn" class="btn btn-secondary">{} Beautify</button>
+                <select id="languageSelect" class="language-select">
+                    <option value="cpp">Language C++</option>
+                </select>
+                <span class="info-icon">ℹ</span>
+                <span class="settings-icon">⚙</span>
+            </div>
+        </div>
+
+        <!-- Code Editor -->
+        <div class="editor-container">
+            <div class="line-numbers" id="lineNumbers"></div>
+            <textarea id="codeEditor" class="code-editor" spellcheck="false" placeholder="Write your code here..."></textarea>
+        </div>
+
+        <!-- Separator -->
+        <div class="separator">
+            <span>output</span>
+        </div>
+
+        <!-- Output Console -->
+        <div class="console-container">
+            <div id="outputConsole" class="console-output"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
