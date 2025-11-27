@@ -9,7 +9,7 @@
 //    - Under "API restrictions", make sure "Don't restrict key" is selected
 //    - Under "Application restrictions", if set, add your domain (e.g., *.github.io)
 // 5. Update the API key below
-const GEMINI_API_KEY = 'AIzaSyAloee1yeluQClC_qDHZVG7GVI86k6PJ68';
+const GEMINI_API_KEY = 'AIzaSyAUd4Lj8nAnLUF_v0TFHXu5Egk794c10lo';
 const GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`;
 
 // DOM Elements
@@ -406,4 +406,5 @@ window.addEventListener('DOMContentLoaded', () => {
         updateLineNumbers();
     }
 });
+
 
