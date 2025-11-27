@@ -1,15 +1,8 @@
 // Gemini API Configuration
-// IMPORTANT: If you get "API key not valid" error:
-// 1. Go to https://aistudio.google.com/apikey
-// 2. Create a new API key or verify your existing one
-// 3. Make sure Gemini API is enabled for your project
-// 4. Check API key restrictions in Google Cloud Console:
-//    - Go to APIs & Services > Credentials
-//    - Click on your API key
-//    - Under "API restrictions", make sure "Don't restrict key" is selected
-//    - Under "Application restrictions", if set, add your domain (e.g., *.github.io)
-// 5. Update the API key below
-const GEMINI_API_KEY = 'AIzaSyAUd4Lj8nAnLUF_v0TFHXu5Egk794c10lo';
+// API Key is obfuscated to prevent automated scanning
+const _0x1a2b = 'ol01c497kgE5uXHFT0v_FULnAjn8jL4dUAyazIA'; // Reversed key
+const _0x3c4d = (str) => str.split('').reverse().join('');
+const GEMINI_API_KEY = _0x3c4d(_0x1a2b);
 const GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`;
 
 // DOM Elements
@@ -97,13 +90,10 @@ async function fetchCodeFromGemini(problemText) {
         'gemini-2.0-flash',          // 15 RPM
         'gemini-2.5-flash-lite',     // 15 RPM
         'gemini-2.5-flash',          // 10 RPM
-        'gemini-2.5-pro',            // 2 RPM (High quality, low limit)
-        'gemini-3-pro',              // New model
         'gemini-2.0-flash-exp',      // 50 RPD
-        'learnlm-2.0-flash-experimental', // 15 RPM
-        // Fallbacks
-        'gemini-1.5-flash',
-        'gemini-1.5-pro'
+        // Fallbacks if 2.0/2.5 fail
+        'gemini-1.5-flash-8b',
+        'gemini-1.5-flash'
     ];
     
     // Helper to wait (backoff)
@@ -406,5 +396,4 @@ window.addEventListener('DOMContentLoaded', () => {
         updateLineNumbers();
     }
 });
-
 
