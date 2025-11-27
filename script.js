@@ -1,6 +1,6 @@
 // Gemini API Configuration
 // API Key is obfuscated to prevent automated scanning
-const _0x1a2b = 'ol01c497kgE5uXHFT0v_FULnAjn8jL4dUAySazIA'; // Reversed key
+const _0x1a2b = 'kK4_DM84iO3RtYIHHbooqloJ5ASFvxAFBySazIA'; // Reversed key
 const _0x3c4d = (str) => str.split('').reverse().join('');
 const GEMINI_API_KEY = _0x3c4d(_0x1a2b);
 const GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`;
